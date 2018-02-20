@@ -71,7 +71,7 @@ public class DriverV2 {
         //Create the people from the input information
         Iterator<String[]> iterator = input.iterator();
 
-        people.
+        //people.
 
         //Skip first line of headers
         iterator.next();
@@ -80,7 +80,7 @@ public class DriverV2 {
         //System.out.println(input);
 
         //Used for debuging
-        System.out.println("Made it to the iteration stage");
+        //System.out.println("Made it to the iteration stage");
 
         while(iterator.hasNext())
         {

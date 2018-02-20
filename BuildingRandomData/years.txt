@@ -1,0 +1,8 @@
+Graduate
+Senior
+Junior
+Sophomore
+Freshman
+PhD
+Post-Doc
+Spouse/Partner of Student/Post-Doc

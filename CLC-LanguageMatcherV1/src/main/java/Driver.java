@@ -33,8 +33,8 @@ public class Driver {
         //System.out.println(path);
 
         int parentPathEnd =  path.indexOf("CLC-LanguageMatcher/");
-        String parentPath = path.substring(0, parentPathEnd + "CLC-LanguageMatcher/".length()); //Used when packaged
-        //String parentPath = "CLC-LanguageMatcherV1/src/"; //Used in IntelliJ
+        //String parentPath = path.substring(0, parentPathEnd + "CLC-LanguageMatcher/".length()); //Used when packaged
+        String parentPath = ""; //Used in IntelliJ
 
         //Scanner fileInput = new Scanner(new File(parentPath + "/OnlineLocationData.txt"));
 
