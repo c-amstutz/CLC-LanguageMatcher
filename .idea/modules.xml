@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CLC-LanguageMatcher.iml" filepath="$PROJECT_DIR$/CLC-LanguageMatcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CLC-LanguageMatcherV1/CLC-LanguageMatcherV1.iml" filepath="$PROJECT_DIR$/CLC-LanguageMatcherV1/CLC-LanguageMatcherV1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CLC-LanguageMatcherV2/CLC-LanguageMatcherV2.iml" filepath="$PROJECT_DIR$/CLC-LanguageMatcherV2/CLC-LanguageMatcherV2.iml" />
+    </modules>
+  </component>
+</project>
