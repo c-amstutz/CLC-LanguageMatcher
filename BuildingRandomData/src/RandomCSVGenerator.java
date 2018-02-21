@@ -9,7 +9,7 @@ import static com.sun.javafx.util.Utils.split;
 /**
  * Created by christianamstutz on 2/20/18.
  * Generates a set of random people as an example for the Language Matcher program.
- * Built to allow for publishing of code without compromising people's personal information.
+ * Built to allow for publishing of Language Matching code without compromising people's personal information.
  */
 public class RandomCSVGenerator {
 
@@ -64,7 +64,7 @@ public class RandomCSVGenerator {
             writer.append(',');
             writer.append("Interest 2");
             writer.append(',');
-            writer.append("Interst 3");
+            writer.append("Interest 3");
             writer.append(',');
             writer.append("Personality");
             writer.append('\n');
@@ -76,18 +76,26 @@ public class RandomCSVGenerator {
             e.printStackTrace();
         }
 
+        int personNumber = 1;
         for(String[] person : people){
             try{
-                for(int i = 0; i < person.length; i++) {
-                    writer.append(person[i]);
-                    if(i < person.length - 1)
+                for(int i = 0; i < person.length + 1; i++) {
+
+                    if(i == 0)
+                        writer.append(Integer.toString(personNumber));
+                    else
+                        writer.append(person[i - 1]);
+
+                    if(i < person.length)
                         writer.append(',');
                 }
-                writer.append('\n');
+                if(! person.equals(people.get(people.size() - 1)))
+                    writer.append('\n');
 
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            personNumber++;
         }
 
 
@@ -102,7 +110,8 @@ public class RandomCSVGenerator {
     public static String[] createPerson()
     {
         String[] names = getName();
-        String[] person = {names[0], names[1], getEmail(names), getStudies(), getYear(), getLanguage(1, 0), getLanguage(2, 0), getLanguage(1, 1), getLanguage(2, 1), getLanguage(3, 1), getInterest(1), getInterest(2), getInterest(3), Integer.toString(getPersonality())};
+
+        String[] person = {names[0] + " " + names[1], getEmail(names), getStudies(), getYear(), getLanguage(1, 0), getLanguage(2, 0), getLanguage(1, 1), getLanguage(2, 1), getLanguage(3, 1), getInterest(1), getInterest(2), getInterest(3), Integer.toString(getPersonality())};
         return person;
     }
 
@@ -111,11 +120,11 @@ public class RandomCSVGenerator {
         List<String> know = new ArrayList<>();
         List<String> toLearn = new ArrayList<>();
 
+        know.add(person[4]);
         know.add(person[5]);
-        know.add(person[6]);
+        toLearn.add(person[6]);
         toLearn.add(person[7]);
         toLearn.add(person[8]);
-        toLearn.add(person[9]);
 
         for(String s: know)
         {
@@ -127,6 +136,17 @@ public class RandomCSVGenerator {
         Set<String> toLearnSet = new HashSet<>(toLearn);
 
         if(knowSet.size() < know.size() || toLearnSet.size() < toLearn.size())
+            return false;
+
+        //11,12,13
+        List<String> interests = new ArrayList<>();
+        interests.add(person[9]);
+        interests.add(person[10]);
+        interests.add(person[11]);
+
+        Set<String> interestsSet = new HashSet<>(interests);
+
+        if(interestsSet.size() < interests.size())
             return false;
 
         return true;

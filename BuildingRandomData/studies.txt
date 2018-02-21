@@ -1,6 +1,6 @@
 Engineering
 Chemistry
-Ethnic and cultural studies
+Ethnic and Cultural Studies
 Economics
 Management
 Finance
@@ -9,7 +9,7 @@ Psychology
 Law
 Journalism
 Physics
-Computer science
+Computer Science
 Statistics
 Sociology
 Anthropology
